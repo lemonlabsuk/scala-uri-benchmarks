@@ -1,19 +1,19 @@
 name := "scala-uri-benchmarks"
 
-organization  := "com.github.theon"
+organization  := "io.lemonlabs"
 
 version       := "0.0.1"
 
-scalaVersion  := "2.11.7"
+scalaVersion  := "2.11.12"
 
 scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 
-resolvers += "Sonatype OSS Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots"
+resolvers += "Sonatype OSS Releases" at "https://oss.sonatype.org/content/repositories/releases"
 
 libraryDependencies ++= Seq(
-  "com.netaporter" %% "scala-uri" % "0.4.12-SNAPSHOT",
+  "io.lemonlabs" %% "scala-uri" % "1.0.0-rc1",
   "com.storm-enroute" %% "scalameter" % "0.7"
- )
+)
 
 testFrameworks += new TestFramework("org.scalameter.ScalaMeterFramework")
 
