@@ -33,7 +33,12 @@ Performance tests can be run by running the `./benchmarks` script in the project
 * [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-0.4.12-SNAPSHOT/report/index.html)
 * [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-0.4.12-SNAPSHOT/report/index.html)
 
-# 1.0.0-rc1
+# 1.0.0-rc1.1
 
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-1.0.0-rc1/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/1.0.0-rc1/report/index.html)
+* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-1.0.0-rc1.1/report/index.html)
+* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-1.0.0-rc1.1/report/index.html)
+
+# 1.1.2
+
+* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-1.1.2/report/index.html)
+* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-1.1.2/report/index.html)

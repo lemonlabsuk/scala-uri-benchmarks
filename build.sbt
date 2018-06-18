@@ -11,7 +11,7 @@ scalacOptions := Seq("-unchecked", "-deprecation", "-encoding", "utf8")
 resolvers += "Sonatype OSS Releases" at "https://oss.sonatype.org/content/repositories/releases"
 
 libraryDependencies ++= Seq(
-  "io.lemonlabs" %% "scala-uri" % "1.0.0-rc1",
+  "io.lemonlabs" %% "scala-uri" % "1.1.2",
   "com.storm-enroute" %% "scalameter" % "0.7"
 )
 
