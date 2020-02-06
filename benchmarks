@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-# DATE_STR=$(date +"%Y-%m-%d")
-SCALA_URI_VER=$(cat build.sbt | grep -E "io\.lemonlabs.+scala-uri" | cut -d'"' -f6)
-
-sbt "testOnly *.ParsingBenchmark -- -CresultDir parsing-$SCALA_URI_VER"
-sbt "testOnly *.RenderingBenchmark -- -CresultDir rendering-$SCALA_URI_VER"
-sbt "testOnly *.PublicSuffixBenchmark -- -CresultDir public-suffix-$SCALA_URI_VER"

@@ -1,0 +1,241 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+</head>
+
+<body>
+
+    <div id="version-select">
+        <label>scala-uri version</label>
+    </div>
+    <div>
+        <select id="benchmarks-select" onchange="redrawChart()">
+        </select>
+    </div>
+
+    <div style="width:100%">
+        <canvas id="chart"></canvas>
+    </div>
+
+    <script type="text/javascript">
+        var datasets = [];
+        var versionSeries = {}
+        var versionJmhJsons = {}
+        var benchmarksSelect = document.getElementById('benchmarks-select');
+
+        var possibleXAxes = [
+            'uriPartLength'
+        ];
+
+        var chartColors = {
+            red: 'rgb(255, 99, 132)',
+            orange: 'rgb(255, 159, 64)',
+            yellow: 'rgb(255, 205, 86)',
+            green: 'rgb(75, 192, 192)',
+            blue: 'rgb(54, 162, 235)',
+            purple: 'rgb(153, 102, 255)',
+            grey: 'rgb(201, 203, 207)'
+        };
+
+        function get(url, f) {
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', url);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    f(JSON.parse(xhr.responseText));
+                }
+                else {
+                    console.log('Request failed.  Returned status of ' + xhr.status);
+                }
+            };
+            xhr.send();
+        }
+
+        function findXAxis(jmhJson) {
+           for(var i = 0; i < possibleXAxes.length; i++) {
+                var possibleXAxis = possibleXAxes[i];
+                if(jmhJson[0].params[possibleXAxis] != null) {
+                    return possibleXAxis;
+                }
+            }
+            return null;
+        }
+
+        function findSeries(jmhJson, version) {
+            var series = {};
+
+            for(var i = 0; i < jmhJson.length; i++) {
+                var jmhResult = jmhJson[i];
+                var benchmark = jmhResult.benchmark;
+
+                var params = [];
+                var paramNames = Object.keys(jmhResult.params);
+                var paramsKey = '';
+
+                for(var j = 0; j < paramNames.length; j++) {
+                    var paramName = paramNames[j];
+                    if(!possibleXAxes.includes(paramName)) {
+                        var paramValue = jmhResult.params[paramName];
+                        paramsKey += '(' + paramName + '=' + paramValue + ')';
+                        params.push({
+                            key: paramName,
+                            value: paramValue
+                        });
+                    }
+                }
+
+                series[benchmark + paramsKey] = {
+                    name: version + paramsKey,
+                    benchmark: benchmark,
+                    params: params
+                };
+            }
+            return Object.values(series);
+        }
+
+        function paramsMatch(jmhResult, thisSeries) {
+            for(var i = 0; i < thisSeries.params.length; i++) {
+                var param = thisSeries.params[i];
+                if(jmhResult.params[param.key] != param.value) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        function removeFromChart(version) {
+            delete versionSeries[version];
+            redrawBenchmarksSelect();
+        }
+
+        function addToChart(jmhJson, version) {
+            console.log(jmhJson);
+            var series = findSeries(jmhJson, version);
+
+            versionSeries[version] = series;
+            versionJmhJsons[version] = jmhJson;
+            console.log(versionSeries);
+
+            redrawBenchmarksSelect();
+            redrawChart();
+        }
+
+        function redrawBenchmarksSelect() {
+            var benchmarks = new Set();
+
+            Object.values(versionSeries).forEach(function(series) {
+                series.forEach(function(aSeries) {
+                    benchmarks.add(aSeries.benchmark);
+                });
+            });
+
+            benchmarksSelect.innerHTML = '';
+            benchmarks.forEach(function(benchmark) {
+                benchmarksSelect.innerHTML += '<option value="' + benchmark + '">' + benchmark + '</option>';
+            });
+        }
+
+        function redrawChart() {
+            datasets = [];
+            var selectedBenchmark = benchmarksSelect.value;
+            var colorNames = Object.keys(chartColors);
+            var xAxis;
+            var yAxis;
+
+            Object.keys(versionSeries).forEach(function(version) {
+                var series = versionSeries[version];
+                var jmhJson = versionJmhJsons[version];
+                xAxis = findXAxis(jmhJson);
+
+                for(var i = 0; i < series.length; i++) {
+                    var thisSeries = series[i];
+
+                    if(thisSeries.benchmark != selectedBenchmark) {
+                        continue;
+                    }
+
+                    var data = [];
+
+                    for(var j = 0; j < jmhJson.length; j++) {
+                        var jmhResult = jmhJson[j];
+                        yAxis = jmhResult.primaryMetric.scoreUnit
+                        var theseParamsMatch = paramsMatch(jmhResult, thisSeries);
+
+                        if(jmhResult.benchmark == selectedBenchmark && theseParamsMatch) {
+                            console.log(jmhResult.benchmark + ' matches!');
+                            data.push({
+                                x: jmhJson[j].params[xAxis],
+                                y: jmhJson[j].primaryMetric.score
+                            });
+                        }
+                    }
+
+                    if(data.length > 0) {
+                        var colorName = colorNames[datasets.length % colorNames.length];
+                        var newColor = chartColors[colorName];
+
+                        datasets.push({
+                            label: thisSeries.name,
+                            data: data,
+                            backgroundColor: newColor,
+                            borderColor: newColor,
+                            showLine: true,
+                            fill: false
+                        });
+                    }
+                }
+            });
+
+            console.log(datasets);
+
+            var ctx = document.getElementById('chart').getContext('2d');
+            var scatterChart = new Chart(ctx, {
+                type: 'scatter',
+                data: {
+                    datasets: datasets
+                },
+                options: {
+                    scales: {
+                        xAxes: [{
+                            type: 'linear',
+                            position: 'bottom',
+                            scaleLabel: {
+                                display: true,
+                                labelString: xAxis
+						    }
+                        }],
+                        yAxes: [{
+                            scaleLabel: {
+                                display: true,
+                                labelString: yAxis
+						    }
+                        }]
+                    },
+                    legend: {
+                        position: 'right'
+                    }
+                }
+            });
+        }
+
+        function populateVersionSelect(versions) {
+            var versionSelect = document.getElementById('version-select');
+            for (var version of versions) {
+                versionSelect.innerHTML += '<label>' + version + '</label><input id="' + version + '-checkbox" onchange="versionClicked(\'' + version + '\');" type="checkbox" />';
+            }
+        }
+
+        function versionClicked(ver) {
+            if(document.getElementById(ver + '-checkbox').checked) {
+                get('jmh-' + ver + '.json', function(r) { addToChart(r, ver) });
+            } else {
+                removeFromChart(ver);
+            }
+        }
+
+        get('jmh-scala-uri-versions.json', populateVersionSelect)
+    </script>
+</body>
+</html>
