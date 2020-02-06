@@ -1,44 +1,9 @@
 # scala-uri-benchmarks
 
-[scala-uri](https://github.com/lemonlabsuk/scala-uri/) is a small Scala library that helps you work with URIs. This project micro benchmarks the library using [scala meter](http://axel22.github.io/scalameter/)
+[scala-uri](https://github.com/lemonlabsuk/scala-uri/) is a small Scala library that helps you work with URIs. 
+This project micro benchmarks the library using JMH
 
-Running these benchmarks requires:
+Performance tests can be run by running the `./benchmarks` script in the project root. 
+The JSON reports can be visualised using `index.html`.
 
- * Java 7
- * Scala 2.11
-
-Performance tests can be run by running the `./benchmarks` script in the project root. The HTML reports are generated in `results/parsing/report/index.html` and `results/rendering/report/index.html`.
-
-# Results
-
-# 1.1.2
-
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-1.1.2/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-1.1.2/report/index.html)
-
-# 1.0.0-rc1.1
-
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-1.0.0-rc1.1/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-1.0.0-rc1.1/report/index.html)
-
-# 0.4.12-SNAPSHOT
-
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-0.4.12-SNAPSHOT/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-0.4.12-SNAPSHOT/report/index.html)
-
-# 0.4.3
-
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-0.4.3/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-0.4.3/report/index.html)
-
-# 0.4.2
-
-`scala-uri` 0.4.x upgrades from parboiled to parboiled2 which gives 2x to 3x faster parsing times.
-
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-0.4.2/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-0.4.2/report/index.html)
-
-# 0.3.6
-
-* [Parsing Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/parsing-0.3.6/report/index.html)
-* [toString Rendering Time](http://lemonlabsuk.github.io/scala-uri-benchmarks/rendering-0.3.6/report/index.html)
+The old scalameter reports can be found in `scalameter/`
