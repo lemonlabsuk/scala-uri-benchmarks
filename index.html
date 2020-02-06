@@ -223,7 +223,8 @@
         function populateVersionSelect(versions) {
             var versionSelect = document.getElementById('version-select');
             for (var version of versions) {
-                versionSelect.innerHTML += '<label>' + version + '</label><input id="' + version + '-checkbox" onchange="versionClicked(\'' + version + '\');" type="checkbox" />';
+                versionSelect.innerHTML += '<label>' + version + '</label><input id="' + version + '-checkbox" checked onchange="versionClicked(\'' + version + '\');" type="checkbox" />';
+                versionClicked(version);
             }
         }
 
