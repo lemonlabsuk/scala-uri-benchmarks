@@ -1,0 +1,2404 @@
+[
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.001560229169979103,
+            "scoreError" : 8.304442427317911E-4,
+            "scoreConfidence" : [
+                7.29784927247312E-4,
+                0.0023906734127108944
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.001004834496629002,
+                "50.0" : 0.0013962367833342555,
+                "90.0" : 0.0024369618291839863,
+                "95.0" : 0.0024580460026579856,
+                "99.0" : 0.0024580460026579856,
+                "99.9" : 0.0024580460026579856,
+                "99.99" : 0.0024580460026579856,
+                "99.999" : 0.0024580460026579856,
+                "99.9999" : 0.0024580460026579856,
+                "100.0" : 0.0024580460026579856
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0011517443853344541,
+                    0.0010119150312388836,
+                    0.0022472042679179934,
+                    0.0017121582191370953,
+                    0.0011310879758704932,
+                    0.0011546005422374429,
+                    0.001004834496629002,
+                    0.0016378730244310683,
+                    0.0024580460026579856,
+                    0.002092827754336615
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.0019583837814363338,
+            "scoreError" : 4.090702383372596E-4,
+            "scoreConfidence" : [
+                0.0015493135430990743,
+                0.0023674540197735935
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0017488692855045682,
+                "50.0" : 0.0018900566298015102,
+                "90.0" : 0.0026165333589948433,
+                "95.0" : 0.002683880944584878,
+                "99.0" : 0.002683880944584878,
+                "99.9" : 0.002683880944584878,
+                "99.99" : 0.002683880944584878,
+                "99.999" : 0.002683880944584878,
+                "99.9999" : 0.002683880944584878,
+                "100.0" : 0.002683880944584878
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.002683880944584878,
+                    0.0017936463421184558,
+                    0.0018586968822117817,
+                    0.0019492486728806889,
+                    0.0020010813904662882,
+                    0.0019214163773912387,
+                    0.0018248124717741207,
+                    0.0017488692855045682,
+                    0.0017917803587467875,
+                    0.002010405088684529
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.019327227976997385,
+            "scoreError" : 0.0010159706368372706,
+            "scoreConfidence" : [
+                0.018311257340160113,
+                0.020343198613834657
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.018236651034727772,
+                "50.0" : 0.019568160203793254,
+                "90.0" : 0.02004419203454489,
+                "95.0" : 0.020058580166449413,
+                "99.0" : 0.020058580166449413,
+                "99.9" : 0.020058580166449413,
+                "99.99" : 0.020058580166449413,
+                "99.999" : 0.020058580166449413,
+                "99.9999" : 0.020058580166449413,
+                "100.0" : 0.020058580166449413
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.018931762724692526,
+                    0.018236651034727772,
+                    0.019718082284703106,
+                    0.019418238122883406,
+                    0.019914698847404197,
+                    0.019829167569659443,
+                    0.020058580166449413,
+                    0.019825015541476934,
+                    0.01827383845674062,
+                    0.019066245021236432
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.05154327788318921,
+            "scoreError" : 0.015978445143456258,
+            "scoreConfidence" : [
+                0.035564832739732946,
+                0.06752172302664547
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.03462923033803295,
+                "50.0" : 0.056471405455820564,
+                "90.0" : 0.06240105299679394,
+                "95.0" : 0.06282074666666666,
+                "99.0" : 0.06282074666666666,
+                "99.9" : 0.06282074666666666,
+                "99.99" : 0.06282074666666666,
+                "99.999" : 0.06282074666666666,
+                "99.9999" : 0.06282074666666666,
+                "100.0" : 0.06282074666666666
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.03842504016594381,
+                    0.03462923033803295,
+                    0.036609016771866544,
+                    0.056623686990727735,
+                    0.05548361157923349,
+                    0.05862380996793937,
+                    0.05847248212753789,
+                    0.05631912392091339,
+                    0.057426030303030305,
+                    0.06282074666666666
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.06327069965935309,
+            "scoreError" : 0.006552391142018034,
+            "scoreConfidence" : [
+                0.05671830851733505,
+                0.06982309080137111
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.06022136902996143,
+                "50.0" : 0.06101977977513917,
+                "90.0" : 0.07233740592762673,
+                "95.0" : 0.07275570977115874,
+                "99.0" : 0.07275570977115874,
+                "99.9" : 0.07275570977115874,
+                "99.99" : 0.07275570977115874,
+                "99.999" : 0.07275570977115874,
+                "99.9999" : 0.07275570977115874,
+                "100.0" : 0.07275570977115874
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.06857267133583875,
+                    0.07275570977115874,
+                    0.06045691027190332,
+                    0.0603187843373494,
+                    0.0606510790346908,
+                    0.06054618252311363,
+                    0.06210469474969475,
+                    0.06569111502423264,
+                    0.06138848051558753,
+                    0.06022136902996143
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.0013112372597935027,
+            "scoreError" : 6.18273076932585E-4,
+            "scoreConfidence" : [
+                6.929641828609177E-4,
+                0.0019295103367260877
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0010082290154264973,
+                "50.0" : 0.001090142077630233,
+                "90.0" : 0.0021146189735169172,
+                "95.0" : 0.0021582029512836063,
+                "99.0" : 0.0021582029512836063,
+                "99.9" : 0.0021582029512836063,
+                "99.99" : 0.0021582029512836063,
+                "99.999" : 0.0021582029512836063,
+                "99.9999" : 0.0021582029512836063,
+                "100.0" : 0.0021582029512836063
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0017223631736167145,
+                    0.0010542971172405205,
+                    0.0010303858685796038,
+                    0.001014444327663072,
+                    0.0017191236253900055,
+                    0.0021582029512836063,
+                    0.0012708666650011243,
+                    0.001008472815713935,
+                    0.0011259870380199459,
+                    0.0010082290154264973
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.001563591110955095,
+            "scoreError" : 6.597967614806256E-5,
+            "scoreConfidence" : [
+                0.0014976114348070324,
+                0.0016295707871031575
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.001519695506200287,
+                "50.0" : 0.0015548343745587405,
+                "90.0" : 0.0016490425566590898,
+                "95.0" : 0.0016545757856884832,
+                "99.0" : 0.0016545757856884832,
+                "99.9" : 0.0016545757856884832,
+                "99.99" : 0.0016545757856884832,
+                "99.999" : 0.0016545757856884832,
+                "99.9999" : 0.0016545757856884832,
+                "100.0" : 0.0016545757856884832
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0016545757856884832,
+                    0.0015352732908388354,
+                    0.0015727563284309192,
+                    0.001528300822963887,
+                    0.0015950772846785118,
+                    0.0015721861686402042,
+                    0.001519695506200287,
+                    0.001521319846237997,
+                    0.0015374825804772767,
+                    0.0015992434953945494
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.003394827978044854,
+            "scoreError" : 7.83287791928928E-4,
+            "scoreConfidence" : [
+                0.002611540186115926,
+                0.004178115769973782
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0031054581866601363,
+                "50.0" : 0.003164997290637788,
+                "90.0" : 0.0043912305065063354,
+                "95.0" : 0.004395316533774635,
+                "99.0" : 0.004395316533774635,
+                "99.9" : 0.004395316533774635,
+                "99.99" : 0.004395316533774635,
+                "99.999" : 0.004395316533774635,
+                "99.9999" : 0.004395316533774635,
+                "100.0" : 0.004395316533774635
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0031935701843860335,
+                    0.004395316533774635,
+                    0.004354456261091633,
+                    0.003216390432889344,
+                    0.0031054581866601363,
+                    0.003136424396889542,
+                    0.003194222298638573,
+                    0.0031230572642654796,
+                    0.0031099596494154396,
+                    0.003119424572437725
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.0205656963519718,
+            "scoreError" : 0.0016383714312566066,
+            "scoreConfidence" : [
+                0.018927324920715194,
+                0.022204067783228407
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.01931207038601882,
+                "50.0" : 0.02045531198039917,
+                "90.0" : 0.022499366233115835,
+                "95.0" : 0.02259419823888011,
+                "99.0" : 0.02259419823888011,
+                "99.9" : 0.02259419823888011,
+                "99.99" : 0.02259419823888011,
+                "99.999" : 0.02259419823888011,
+                "99.9999" : 0.02259419823888011,
+                "100.0" : 0.02259419823888011
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.021135836772983113,
+                    0.021276544558564165,
+                    0.02259419823888011,
+                    0.019524945634580595,
+                    0.0195446847352628,
+                    0.020515499498997995,
+                    0.021645878181237355,
+                    0.02039512446180034,
+                    0.0197121810513927,
+                    0.01931207038601882
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longDomain",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.021901789176749013,
+            "scoreError" : 0.0018143633127887448,
+            "scoreConfidence" : [
+                0.020087425863960267,
+                0.02371615248953776
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.020724555521503728,
+                "50.0" : 0.021750450942694392,
+                "90.0" : 0.02461405657233309,
+                "95.0" : 0.02483966707036454,
+                "99.0" : 0.02483966707036454,
+                "99.9" : 0.02483966707036454,
+                "99.99" : 0.02483966707036454,
+                "99.999" : 0.02483966707036454,
+                "99.9999" : 0.02483966707036454,
+                "100.0" : 0.02483966707036454
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.02483966707036454,
+                    0.021824619509536784,
+                    0.021676282375851997,
+                    0.022037309918244406,
+                    0.020893516489196733,
+                    0.021509533639961494,
+                    0.02211705983000331,
+                    0.0208117853227771,
+                    0.022583562090050028,
+                    0.020724555521503728
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.0012970144709765808,
+            "scoreError" : 7.827213352533573E-4,
+            "scoreConfidence" : [
+                5.142931357232235E-4,
+                0.002079735806229938
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0010375729261106075,
+                "50.0" : 0.0010541195279049472,
+                "90.0" : 0.0023548136787470415,
+                "95.0" : 0.0023747762826976347,
+                "99.0" : 0.0023747762826976347,
+                "99.9" : 0.0023747762826976347,
+                "99.99" : 0.0023747762826976347,
+                "99.999" : 0.0023747762826976347,
+                "99.9999" : 0.0023747762826976347,
+                "100.0" : 0.0023747762826976347
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0010752121266339697,
+                    0.0010409657854616734,
+                    0.0010508866201910663,
+                    0.0023747762826976347,
+                    0.0021751502431917036,
+                    0.0010500436196083452,
+                    0.0010375729261106075,
+                    0.0010573524356188285,
+                    0.0010378441281542973,
+                    0.0010703405420976824
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.0032417139233808824,
+            "scoreError" : 0.0017040859152875265,
+            "scoreConfidence" : [
+                0.001537628008093356,
+                0.004945799838668409
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.002770880133806663,
+                "50.0" : 0.002882347926470426,
+                "90.0" : 0.006100822022421836,
+                "95.0" : 0.006442982637782734,
+                "99.0" : 0.006442982637782734,
+                "99.9" : 0.006442982637782734,
+                "99.99" : 0.006442982637782734,
+                "99.999" : 0.006442982637782734,
+                "99.9999" : 0.006442982637782734,
+                "100.0" : 0.006442982637782734
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.006442982637782734,
+                    0.002981581177320332,
+                    0.0028682513165760484,
+                    0.002770880133806663,
+                    0.00283033846046284,
+                    0.0029062491109376355,
+                    0.003021376484173748,
+                    0.002845109957686883,
+                    0.0028964445363648035,
+                    0.002853925418697138
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.026238247968491585,
+            "scoreError" : 0.012023892043261592,
+            "scoreConfidence" : [
+                0.014214355925229993,
+                0.038262140011753175
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.02047542232474175,
+                "50.0" : 0.022550873171150357,
+                "90.0" : 0.04448832991695997,
+                "95.0" : 0.04573392311130979,
+                "99.0" : 0.04573392311130979,
+                "99.9" : 0.04573392311130979,
+                "99.99" : 0.04573392311130979,
+                "99.999" : 0.04573392311130979,
+                "99.9999" : 0.04573392311130979,
+                "100.0" : 0.04573392311130979
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.02047542232474175,
+                    0.02294968355716059,
+                    0.022152062785140127,
+                    0.03327799116781158,
+                    0.04573392311130979,
+                    0.02909807998289136,
+                    0.0213157147025112,
+                    0.0240220212077642,
+                    0.021694414321980115,
+                    0.02166316652360515
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.2952925637158653,
+            "scoreError" : 0.1431405843294896,
+            "scoreConfidence" : [
+                0.15215197938637573,
+                0.43843314804535494
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.2492625759416768,
+                "50.0" : 0.26311448665645876,
+                "90.0" : 0.5348526436656673,
+                "95.0" : 0.560766402173913,
+                "99.0" : 0.560766402173913,
+                "99.9" : 0.560766402173913,
+                "99.99" : 0.560766402173913,
+                "99.999" : 0.560766402173913,
+                "99.9999" : 0.560766402173913,
+                "100.0" : 0.560766402173913
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.560766402173913,
+                    0.2635796205997392,
+                    0.25108728358208954,
+                    0.28532427972027974,
+                    0.3016288170914543,
+                    0.2492625759416768,
+                    0.2626493527131783,
+                    0.25374846675031365,
+                    0.26642645406824145,
+                    0.2584523845177665
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.5822995640607018,
+            "scoreError" : 0.0668013325212834,
+            "scoreConfidence" : [
+                0.5154982315394184,
+                0.6491008965819852
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.5510534555256065,
+                "50.0" : 0.5696335872043317,
+                "90.0" : 0.6897689072261779,
+                "95.0" : 0.7003376167247387,
+                "99.0" : 0.7003376167247387,
+                "99.9" : 0.7003376167247387,
+                "99.99" : 0.7003376167247387,
+                "99.999" : 0.7003376167247387,
+                "99.9999" : 0.7003376167247387,
+                "100.0" : 0.7003376167247387
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.5757816206896552,
+                    0.5884678546511628,
+                    0.7003376167247387,
+                    0.5803727896253602,
+                    0.5590307417582417,
+                    0.5510534555256065,
+                    0.5634855537190082,
+                    0.5511219397260274,
+                    0.5946505217391305,
+                    0.5586935464480874
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.0011496572548141007,
+            "scoreError" : 4.595525223881767E-4,
+            "scoreConfidence" : [
+                6.901047324259239E-4,
+                0.0016092097772022775
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0010211502192146883,
+                "50.0" : 0.0010449353674060805,
+                "90.0" : 0.001921739920225441,
+                "95.0" : 0.0020091095123099894,
+                "99.0" : 0.0020091095123099894,
+                "99.9" : 0.0020091095123099894,
+                "99.99" : 0.0020091095123099894,
+                "99.999" : 0.0020091095123099894,
+                "99.9999" : 0.0020091095123099894,
+                "100.0" : 0.0020091095123099894
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0020091095123099894,
+                    0.001027840416765668,
+                    0.0010514342800049697,
+                    0.0010360295166658901,
+                    0.0010584440984214734,
+                    0.0010384364548071913,
+                    0.0010211502192146883,
+                    0.0010294919602647672,
+                    0.0010892224982218678,
+                    0.0011354135914645024
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.002312142317016084,
+            "scoreError" : 9.372426302784277E-4,
+            "scoreConfidence" : [
+                0.0013748996867376565,
+                0.0032493849472945116
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.00200732222080883,
+                "50.0" : 0.002043750831209255,
+                "90.0" : 0.0038633121627576292,
+                "95.0" : 0.004010772305886955,
+                "99.0" : 0.004010772305886955,
+                "99.9" : 0.004010772305886955,
+                "99.99" : 0.004010772305886955,
+                "99.999" : 0.004010772305886955,
+                "99.9999" : 0.004010772305886955,
+                "100.0" : 0.004010772305886955
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0022752784680024397,
+                    0.004010772305886955,
+                    0.0025361708745936956,
+                    0.0020271481616419224,
+                    0.0021449049838160408,
+                    0.002025716262417427,
+                    0.0020603535007765877,
+                    0.00200732222080883,
+                    0.0020169993766839586,
+                    0.002016757015532983
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.015236503185550917,
+            "scoreError" : 0.006521232016358394,
+            "scoreConfidence" : [
+                0.008715271169192523,
+                0.02175773520190931
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.012894687323037323,
+                "50.0" : 0.01313381685206821,
+                "90.0" : 0.025093235882022145,
+                "95.0" : 0.02560245161701044,
+                "99.0" : 0.02560245161701044,
+                "99.9" : 0.02560245161701044,
+                "99.99" : 0.02560245161701044,
+                "99.999" : 0.02560245161701044,
+                "99.9999" : 0.02560245161701044,
+                "100.0" : 0.02560245161701044
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.013924602449888641,
+                    0.02560245161701044,
+                    0.020510294267127464,
+                    0.013115369048398716,
+                    0.013055648222887645,
+                    0.012894687323037323,
+                    0.014150417491178301,
+                    0.013152264655737706,
+                    0.013055117916908962,
+                    0.012904178863333967
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.14864614101296542,
+            "scoreError" : 0.07022876397151744,
+            "scoreConfidence" : [
+                0.07841737704144798,
+                0.21887490498448287
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.12808865399239544,
+                "50.0" : 0.13497564391311948,
+                "90.0" : 0.2665713934499126,
+                "95.0" : 0.27983548127600555,
+                "99.0" : 0.27983548127600555,
+                "99.9" : 0.27983548127600555,
+                "99.99" : 0.27983548127600555,
+                "99.999" : 0.27983548127600555,
+                "99.9999" : 0.27983548127600555,
+                "100.0" : 0.27983548127600555
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.27983548127600555,
+                    0.136703184730743,
+                    0.13653959154929576,
+                    0.14719460301507536,
+                    0.12808865399239544,
+                    0.1300225196451204,
+                    0.12989924468770123,
+                    0.1334116962769432,
+                    0.1366361692620176,
+                    0.12813026569435637
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longPath",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.3973240537916791,
+            "scoreError" : 0.0628839084754202,
+            "scoreConfidence" : [
+                0.33444014531625893,
+                0.4602079622670993
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.3701286423357664,
+                "50.0" : 0.37451220668998764,
+                "90.0" : 0.47841169079203694,
+                "95.0" : 0.4795888938679245,
+                "99.0" : 0.4795888938679245,
+                "99.9" : 0.4795888938679245,
+                "99.99" : 0.4795888938679245,
+                "99.999" : 0.4795888938679245,
+                "99.9999" : 0.4795888938679245,
+                "100.0" : 0.4795888938679245
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.3732534208566108,
+                    0.3701286937269373,
+                    0.371295187037037,
+                    0.39921345725646123,
+                    0.3935198277886497,
+                    0.4795888938679245,
+                    0.37252455941499085,
+                    0.3757709925233645,
+                    0.3701286423357664,
+                    0.46781686310904874
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.002539616367039181,
+            "scoreError" : 6.849088204427636E-4,
+            "scoreConfidence" : [
+                0.0018547075465964174,
+                0.0032245251874819447
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.002204582680539228,
+                "50.0" : 0.0023545257147826056,
+                "90.0" : 0.003425486089553386,
+                "95.0" : 0.0034432485779102052,
+                "99.0" : 0.0034432485779102052,
+                "99.9" : 0.0034432485779102052,
+                "99.99" : 0.0034432485779102052,
+                "99.999" : 0.0034432485779102052,
+                "99.9999" : 0.0034432485779102052,
+                "100.0" : 0.0034432485779102052
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.002204967791063154,
+                    0.0034432485779102052,
+                    0.003265623694342013,
+                    0.0022083295123586366,
+                    0.0026643394369573322,
+                    0.002271391099671487,
+                    0.002204582680539228,
+                    0.0023441025964060333,
+                    0.002424629447984535,
+                    0.002364948833159178
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.004784629466041317,
+            "scoreError" : 0.001803983224368894,
+            "scoreConfidence" : [
+                0.002980646241672423,
+                0.0065886126904102105
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.004074340974840885,
+                "50.0" : 0.004263371288567119,
+                "90.0" : 0.007673392844808152,
+                "95.0" : 0.00790609090909091,
+                "99.0" : 0.00790609090909091,
+                "99.9" : 0.00790609090909091,
+                "99.99" : 0.00790609090909091,
+                "99.999" : 0.00790609090909091,
+                "99.9999" : 0.00790609090909091,
+                "100.0" : 0.00790609090909091
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0042745979818876526,
+                    0.004252144595246586,
+                    0.00557911026626332,
+                    0.00790609090909091,
+                    0.004074340974840885,
+                    0.004808922812227486,
+                    0.004618935966717164,
+                    0.0040919615818753525,
+                    0.00412662721521554,
+                    0.004113562357048272
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.025554936257820467,
+            "scoreError" : 0.012403306081748767,
+            "scoreConfidence" : [
+                0.0131516301760717,
+                0.03795824233956924
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.019837337107413606,
+                "50.0" : 0.021797225041293035,
+                "90.0" : 0.04395692872953263,
+                "95.0" : 0.04516661462014134,
+                "99.0" : 0.04516661462014134,
+                "99.9" : 0.04516661462014134,
+                "99.99" : 0.04516661462014134,
+                "99.999" : 0.04516661462014134,
+                "99.9999" : 0.04516661462014134,
+                "100.0" : 0.04516661462014134
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.03306975571405414,
+                    0.04516661462014134,
+                    0.029813668583222763,
+                    0.02185916806181584,
+                    0.020520124118188324,
+                    0.02017234055944056,
+                    0.019837337107413606,
+                    0.0225095664536037,
+                    0.020865505339554172,
+                    0.02173528202077023
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.30895389258913986,
+            "scoreError" : 0.21353808330163787,
+            "scoreConfidence" : [
+                0.09541580928750198,
+                0.5224919758907778
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.2316224684270953,
+                "50.0" : 0.24890930394321648,
+                "90.0" : 0.6433471405369022,
+                "95.0" : 0.6644559967532467,
+                "99.0" : 0.6644559967532467,
+                "99.9" : 0.6644559967532467,
+                "99.99" : 0.6644559967532467,
+                "99.999" : 0.6644559967532467,
+                "99.9999" : 0.6644559967532467,
+                "100.0" : 0.6644559967532467
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.6644559967532467,
+                    0.45336743458980044,
+                    0.2504791950310559,
+                    0.27098876943699735,
+                    0.25360398765432096,
+                    0.23606736277974086,
+                    0.23905824794359576,
+                    0.24255605042016806,
+                    0.247339412855377,
+                    0.2316224684270953
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.6087329831156899,
+            "scoreError" : 0.042904412216694846,
+            "scoreConfidence" : [
+                0.5658285708989951,
+                0.6516373953323847
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.5680489410112359,
+                "50.0" : 0.6116479787579958,
+                "90.0" : 0.6638749182900303,
+                "95.0" : 0.6685859266666667,
+                "99.0" : 0.6685859266666667,
+                "99.9" : 0.6685859266666667,
+                "99.99" : 0.6685859266666667,
+                "99.999" : 0.6685859266666667,
+                "99.9999" : 0.6685859266666667,
+                "100.0" : 0.6685859266666667
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.6685859266666667,
+                    0.6104342321428572,
+                    0.6214758429003021,
+                    0.6045953869047619,
+                    0.6210051547987616,
+                    0.5715820195530726,
+                    0.5933649085545722,
+                    0.5680489410112359,
+                    0.6153756932515337,
+                    0.6128617253731343
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.002634248717957037,
+            "scoreError" : 1.1877245987344693E-4,
+            "scoreConfidence" : [
+                0.00251547625808359,
+                0.0027530211778304843
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.00254587472471839,
+                "50.0" : 0.0026101906865214327,
+                "90.0" : 0.0027969879890864767,
+                "95.0" : 0.002809033062152464,
+                "99.0" : 0.002809033062152464,
+                "99.9" : 0.002809033062152464,
+                "99.99" : 0.002809033062152464,
+                "99.999" : 0.002809033062152464,
+                "99.9999" : 0.002809033062152464,
+                "100.0" : 0.002809033062152464
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.002809033062152464,
+                    0.002612342902567019,
+                    0.0025909136577103704,
+                    0.0025786075518651128,
+                    0.002563319521073526,
+                    0.0026885823314925887,
+                    0.00254587472471839,
+                    0.002666694242520017,
+                    0.002679080714995035,
+                    0.0026080384704758462
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.0037036184751513823,
+            "scoreError" : 2.0423686960417749E-4,
+            "scoreConfidence" : [
+                0.003499381605547205,
+                0.00390785534475556
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.003539787169560114,
+                "50.0" : 0.003644748095296221,
+                "90.0" : 0.003918784312770972,
+                "95.0" : 0.003921362493482417,
+                "99.0" : 0.003921362493482417,
+                "99.9" : 0.003921362493482417,
+                "99.99" : 0.003921362493482417,
+                "99.999" : 0.003921362493482417,
+                "99.9999" : 0.003921362493482417,
+                "100.0" : 0.003921362493482417
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0038955806863679695,
+                    0.003921362493482417,
+                    0.0038283283178076055,
+                    0.0035855828230518913,
+                    0.0036106289825466797,
+                    0.003661455582276636,
+                    0.003740350593895094,
+                    0.003625067494209612,
+                    0.003539787169560114,
+                    0.0036280406083158065
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.014665108211767771,
+            "scoreError" : 0.005725634359115257,
+            "scoreConfidence" : [
+                0.008939473852652514,
+                0.020390742570883028
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.012477597972132371,
+                "50.0" : 0.013132371154590497,
+                "90.0" : 0.02367607379040646,
+                "95.0" : 0.024273010790073133,
+                "99.0" : 0.024273010790073133,
+                "99.9" : 0.024273010790073133,
+                "99.99" : 0.024273010790073133,
+                "99.999" : 0.024273010790073133,
+                "99.9999" : 0.024273010790073133,
+                "100.0" : 0.024273010790073133
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.013873622832172607,
+                    0.013373071220352459,
+                    0.024273010790073133,
+                    0.018303640793406396,
+                    0.012944525184,
+                    0.013320217125180993,
+                    0.012477597972132371,
+                    0.012786357012750455,
+                    0.01276563295482905,
+                    0.01253340623278026
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.1820870166114486,
+            "scoreError" : 0.16140937800539165,
+            "scoreConfidence" : [
+                0.020677638606056953,
+                0.34349639461684023
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.13850930013736265,
+                "50.0" : 0.1464788416940672,
+                "90.0" : 0.4535282215184189,
+                "95.0" : 0.4837619528301887,
+                "99.0" : 0.4837619528301887,
+                "99.9" : 0.4837619528301887,
+                "99.99" : 0.4837619528301887,
+                "99.999" : 0.4837619528301887,
+                "99.9999" : 0.4837619528301887,
+                "100.0" : 0.4837619528301887
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.4837619528301887,
+                    0.18142463971248876,
+                    0.15603511792086888,
+                    0.14043232095304836,
+                    0.14656394,
+                    0.13850930013736265,
+                    0.13974579849211788,
+                    0.14639374338813438,
+                    0.13993874281805746,
+                    0.148064609862219
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryKey",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.3963581358670095,
+            "scoreError" : 0.02643243683395405,
+            "scoreConfidence" : [
+                0.3699256990330555,
+                0.42279057270096354
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.3750407757352941,
+                "50.0" : 0.3960192438034308,
+                "90.0" : 0.4250853363988773,
+                "95.0" : 0.4261691386554622,
+                "99.0" : 0.4261691386554622,
+                "99.9" : 0.4261691386554622,
+                "99.99" : 0.4261691386554622,
+                "99.999" : 0.4261691386554622,
+                "99.9999" : 0.4261691386554622,
+                "100.0" : 0.4261691386554622
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.41533111608961304,
+                    0.40935216904276983,
+                    0.3750407757352941,
+                    0.3912937669902913,
+                    0.38338256367041196,
+                    0.4261691386554622,
+                    0.4040995119047619,
+                    0.38121633766233765,
+                    0.376951258302583,
+                    0.40074472061657035
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.002366971748952863,
+            "scoreError" : 8.970890375650103E-4,
+            "scoreConfidence" : [
+                0.0014698827113878528,
+                0.0032640607865178735
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0020209835650436855,
+                "50.0" : 0.0021038719544161193,
+                "90.0" : 0.003641699571891657,
+                "95.0" : 0.003683394368998752,
+                "99.0" : 0.003683394368998752,
+                "99.9" : 0.003683394368998752,
+                "99.99" : 0.003683394368998752,
+                "99.999" : 0.003683394368998752,
+                "99.9999" : 0.003683394368998752,
+                "100.0" : 0.003683394368998752
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.002139679548720132,
+                    0.0021188281021665926,
+                    0.003683394368998752,
+                    0.0032664463979277967,
+                    0.0020824431278177167,
+                    0.002146516242636387,
+                    0.002058624187931491,
+                    0.0020209835650436855,
+                    0.0020638861416204307,
+                    0.002088915806665646
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.004393504998759751,
+            "scoreError" : 0.0019288017924958974,
+            "scoreConfidence" : [
+                0.002464703206263853,
+                0.006322306791255648
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0037462740951530707,
+                "50.0" : 0.003906748982970238,
+                "90.0" : 0.007573747006142292,
+                "95.0" : 0.00784891804995346,
+                "99.0" : 0.00784891804995346,
+                "99.9" : 0.00784891804995346,
+                "99.99" : 0.00784891804995346,
+                "99.999" : 0.00784891804995346,
+                "99.9999" : 0.00784891804995346,
+                "100.0" : 0.00784891804995346
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0039048572111797675,
+                    0.005097207611841771,
+                    0.00784891804995346,
+                    0.0037462740951530707,
+                    0.003932252333940381,
+                    0.004010585348915653,
+                    0.003773714382931764,
+                    0.003851565233885959,
+                    0.003861034965034965,
+                    0.003908640754760709
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.024567010547386546,
+            "scoreError" : 0.011784907225518015,
+            "scoreConfidence" : [
+                0.012782103321868531,
+                0.03635191777290456
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.021106204449599326,
+                "50.0" : 0.021581773155800975,
+                "90.0" : 0.044304631326258406,
+                "95.0" : 0.046321393629124005,
+                "99.0" : 0.046321393629124005,
+                "99.9" : 0.046321393629124005,
+                "99.99" : 0.046321393629124005,
+                "99.999" : 0.046321393629124005,
+                "99.9999" : 0.046321393629124005,
+                "100.0" : 0.046321393629124005
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.046321393629124005,
+                    0.026153770600467897,
+                    0.023143638995269205,
+                    0.0218064767291532,
+                    0.021301912158599598,
+                    0.021106701774530272,
+                    0.021566460825519992,
+                    0.02156704578261338,
+                    0.021596500528988573,
+                    0.021106204449599326
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.38687803061773457,
+            "scoreError" : 0.2714540435812422,
+            "scoreConfidence" : [
+                0.11542398703649237,
+                0.6583320741989768
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.24021917857142858,
+                "50.0" : 0.29879693173553223,
+                "90.0" : 0.7423480541026309,
+                "95.0" : 0.7606446363636363,
+                "99.0" : 0.7606446363636363,
+                "99.9" : 0.7606446363636363,
+                "99.99" : 0.7606446363636363,
+                "99.999" : 0.7606446363636363,
+                "99.9999" : 0.7606446363636363,
+                "100.0" : 0.7606446363636363
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.5478525501355014,
+                    0.7606446363636363,
+                    0.5776788137535817,
+                    0.2791146521145975,
+                    0.2612517802340702,
+                    0.25700019230769233,
+                    0.3717418181818182,
+                    0.3184792113564669,
+                    0.25479747315855183,
+                    0.24021917857142858
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "true",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.6367604286631339,
+            "scoreError" : 0.20124159604997374,
+            "scoreConfidence" : [
+                0.43551883261316016,
+                0.8380020247131076
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.572711799442897,
+                "50.0" : 0.5947377976241243,
+                "90.0" : 0.9737732214134928,
+                "95.0" : 1.0140559603960395,
+                "99.0" : 1.0140559603960395,
+                "99.9" : 1.0140559603960395,
+                "99.99" : 1.0140559603960395,
+                "99.999" : 1.0140559603960395,
+                "99.9999" : 1.0140559603960395,
+                "100.0" : 1.0140559603960395
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    1.0140559603960395,
+                    0.6112285705705706,
+                    0.5857921239193083,
+                    0.5896761781609196,
+                    0.606143223880597,
+                    0.5987921462686567,
+                    0.5886209140401146,
+                    0.572711799442897,
+                    0.5906834489795918,
+                    0.6098999209726443
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1"
+        },
+        "primaryMetric" : {
+            "score" : 0.00275089959168819,
+            "scoreError" : 0.0012463335295531401,
+            "scoreConfidence" : [
+                0.0015045660621350499,
+                0.0039972331212413306
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0021701765724674318,
+                "50.0" : 0.002302504994215973,
+                "90.0" : 0.004292811020156271,
+                "95.0" : 0.0043019970947620265,
+                "99.0" : 0.0043019970947620265,
+                "99.9" : 0.0043019970947620265,
+                "99.99" : 0.0043019970947620265,
+                "99.999" : 0.0043019970947620265,
+                "99.9999" : 0.0043019970947620265,
+                "100.0" : 0.0043019970947620265
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.0023210243310969204,
+                    0.002235252792885091,
+                    0.002637662211767139,
+                    0.004210136348704472,
+                    0.0043019970947620265,
+                    0.0028878354626949952,
+                    0.0022003063880726955,
+                    0.002283985657335026,
+                    0.0022606190570961036,
+                    0.0021701765724674318
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "10"
+        },
+        "primaryMetric" : {
+            "score" : 0.003685491471216118,
+            "scoreError" : 0.001342852857950083,
+            "scoreConfidence" : [
+                0.0023426386132660354,
+                0.005028344329166201
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.0031398923151537907,
+                "50.0" : 0.0033353392740599645,
+                "90.0" : 0.0055809643065591885,
+                "95.0" : 0.005641963937783682,
+                "99.0" : 0.005641963937783682,
+                "99.9" : 0.005641963937783682,
+                "99.99" : 0.005641963937783682,
+                "99.999" : 0.005641963937783682,
+                "99.9999" : 0.005641963937783682,
+                "100.0" : 0.005641963937783682
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.003409847367805139,
+                    0.0033005834534121266,
+                    0.0031891622831914223,
+                    0.005031967625538739,
+                    0.005641963937783682,
+                    0.0031398923151537907,
+                    0.0034209972403580805,
+                    0.003370095094707802,
+                    0.003199270188584202,
+                    0.0031511352056261934
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "100"
+        },
+        "primaryMetric" : {
+            "score" : 0.014098491499007004,
+            "scoreError" : 0.005063385274686883,
+            "scoreConfidence" : [
+                0.00903510622432012,
+                0.019161876773693888
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.012190992262231158,
+                "50.0" : 0.012576244842642473,
+                "90.0" : 0.021533609225419654,
+                "95.0" : 0.02184964463705309,
+                "99.0" : 0.02184964463705309,
+                "99.9" : 0.02184964463705309,
+                "99.99" : 0.02184964463705309,
+                "99.999" : 0.02184964463705309,
+                "99.9999" : 0.02184964463705309,
+                "100.0" : 0.02184964463705309
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.012906701574702343,
+                    0.012643618011465204,
+                    0.01868929052071874,
+                    0.02184964463705309,
+                    0.012451662187864285,
+                    0.013141290075344245,
+                    0.012258299789726645,
+                    0.012508871673819743,
+                    0.012344544257144584,
+                    0.012190992262231158
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "1000"
+        },
+        "primaryMetric" : {
+            "score" : 0.19255640450677827,
+            "scoreError" : 0.19057951246095167,
+            "scoreConfidence" : [
+                0.0019768920458266004,
+                0.38313591696773
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.13876100947867298,
+                "50.0" : 0.14500508420912261,
+                "90.0" : 0.5112210554312853,
+                "95.0" : 0.5420937347480106,
+                "99.0" : 0.5420937347480106,
+                "99.9" : 0.5420937347480106,
+                "99.99" : 0.5420937347480106,
+                "99.999" : 0.5420937347480106,
+                "99.9999" : 0.5420937347480106,
+                "100.0" : 0.5420937347480106
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.5420937347480106,
+                    0.23336694158075602,
+                    0.15012420863836018,
+                    0.1394354935418083,
+                    0.14838300510576222,
+                    0.13876100947867298,
+                    0.14145619206680585,
+                    0.1468340029154519,
+                    0.1419332914893617,
+                    0.1431761655027933
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    },
+    {
+        "jmhVersion" : "1.21",
+        "benchmark" : "io.lemonlabs.uri.ParseLongPartsBenchmark.longQueryValue",
+        "mode" : "avgt",
+        "threads" : 1,
+        "forks" : 1,
+        "jvm" : "/Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre/bin/java",
+        "jvmArgs" : [
+        ],
+        "jdkVersion" : "1.8.0_131",
+        "vmName" : "Java HotSpot(TM) 64-Bit Server VM",
+        "vmVersion" : "25.131-b11",
+        "warmupIterations" : 10,
+        "warmupTime" : "200 ms",
+        "warmupBatchSize" : 1,
+        "measurementIterations" : 10,
+        "measurementTime" : "200 ms",
+        "measurementBatchSize" : 1,
+        "params" : {
+            "everythingIsPercentEncoded" : "false",
+            "uriPartLength" : "2000"
+        },
+        "primaryMetric" : {
+            "score" : 0.40616103103146195,
+            "scoreError" : 0.06053520174477248,
+            "scoreConfidence" : [
+                0.3456258292866895,
+                0.4666962327762344
+            ],
+            "scorePercentiles" : {
+                "0.0" : 0.36890000183150184,
+                "50.0" : 0.39069193882700815,
+                "90.0" : 0.4955612592545711,
+                "95.0" : 0.5027489160493828,
+                "99.0" : 0.5027489160493828,
+                "99.9" : 0.5027489160493828,
+                "99.99" : 0.5027489160493828,
+                "99.999" : 0.5027489160493828,
+                "99.9999" : 0.5027489160493828,
+                "100.0" : 0.5027489160493828
+            },
+            "scoreUnit" : "ms/op",
+            "rawData" : [
+                [
+                    0.41644778305785124,
+                    0.37468257276119404,
+                    0.3812340187969925,
+                    0.3902228505747126,
+                    0.381702473880597,
+                    0.43087234810126585,
+                    0.36890000183150184,
+                    0.4236383181818182,
+                    0.5027489160493828,
+                    0.39116102707930367
+                ]
+            ]
+        },
+        "secondaryMetrics" : {
+        }
+    }
+]
+
+
