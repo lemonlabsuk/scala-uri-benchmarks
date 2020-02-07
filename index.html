@@ -119,7 +119,6 @@
             console.log(versionSeries);
 
             redrawBenchmarksSelect();
-            redrawChart();
         }
 
         function redrawBenchmarksSelect() {
@@ -234,6 +233,7 @@
             } else {
                 removeFromChart(ver);
             }
+            redrawChart();
         }
 
         get('jmh-scala-uri-versions.json', populateVersionSelect)
