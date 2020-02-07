@@ -24,12 +24,18 @@
         var versionJmhJsons = {}
         var benchmarksSelect = document.getElementById('benchmarks-select');
 
-        var possibleXAxes = [
+        const possibleXAxes = [
             'uriPartLength',
             'uriParts'
         ];
 
-        var chartColors = {
+        const checkedByDefault = [
+            '1.1.2',
+            '1.5.1',
+            '2.0.0-M5'
+        ]
+
+        const chartColors = {
             red: 'rgb(255, 99, 132)',
             orange: 'rgb(255, 159, 64)',
             yellow: 'rgb(255, 205, 86)',
@@ -53,11 +59,16 @@
             xhr.send();
         }
 
-        function findXAxis(jmhJson) {
-           for(var i = 0; i < possibleXAxes.length; i++) {
-                var possibleXAxis = possibleXAxes[i];
-                if(jmhJson[0].params[possibleXAxis] != null) {
-                    return possibleXAxis;
+        function findXAxis(jmhJson, selectedBenchmark) {
+            for(var i = 0; i < jmhJson.length; i++) {
+                var jmhResult = jmhJson[i];
+                if(jmhResult.benchmark == selectedBenchmark) {
+                    for(var j = 0; j < possibleXAxes.length; j++) {
+                        var possibleXAxis = possibleXAxes[j];
+                        if(jmhResult.params[possibleXAxis] != null) {
+                            return possibleXAxis;
+                        }
+                    }
                 }
             }
             return null;
@@ -148,7 +159,7 @@
             Object.keys(versionSeries).forEach(function(version) {
                 var series = versionSeries[version];
                 var jmhJson = versionJmhJsons[version];
-                xAxis = findXAxis(jmhJson);
+                xAxis = findXAxis(jmhJson, selectedBenchmark);
 
                 for(var i = 0; i < series.length; i++) {
                     var thisSeries = series[i];
@@ -224,8 +235,12 @@
         function populateVersionSelect(versions) {
             var versionSelect = document.getElementById('version-select');
             for (var version of versions) {
-                versionSelect.innerHTML += '<label>' + version + '</label><input id="' + version + '-checkbox" checked onchange="versionClicked(\'' + version + '\');" type="checkbox" />';
-                versionClicked(version);
+                var check = checkedByDefault.includes(version);
+                var checkedAttr = check ? 'checked': '';
+                versionSelect.innerHTML += '<label>' + version + '</label><input id="' + version + '-checkbox" ' + checkedAttr + ' onchange="versionClicked(\'' + version + '\');" type="checkbox" />';
+                if(check) {
+                    versionClicked(version);
+                }
             }
         }
 
