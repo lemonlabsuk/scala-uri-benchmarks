@@ -2,7 +2,7 @@
 
 SCALA_URI_VER=$(cat build.sbt | grep -E "io\.lemonlabs.+scala-uri" | cut -d'"' -f6)
 
-# sbt "jmh:run -rf json -rff jmh-$SCALA_URI_VER.json"
+sbt "jmh:run -rf json -rff jmh-$SCALA_URI_VER.json"
 
 VER_FILE=jmh-scala-uri-versions.json
 
