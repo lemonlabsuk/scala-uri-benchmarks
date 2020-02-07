@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
-SCALA_URI_VER=$(cat build.sbt | grep -E "io\.lemonlabs.+scala-uri" | cut -d'"' -f6)
+echo "Which version of scala-uri would you like benchmark?"
+read -r SCALA_URI_VER
 
-sbt "jmh:run -rf json -rff jmh-$SCALA_URI_VER.json"
+sbt -DscalaUri.ver=$SCALA_URI_VER "jmh:run -rf json -rff jmh-$SCALA_URI_VER.json"
 
 VER_FILE=jmh-scala-uri-versions.json
 
