@@ -1,28 +1,69 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <div id="version-select">
-        <label>scala-uri version</label>
-    </div>
-    <div>
-        <select id="benchmarks-select" onchange="redrawChart()">
-        </select>
+    <div class="container-fluid" style="padding: 20px;">
+
+        <div class="row">
+            <div class="col-xl card" style="margin: 5px">
+                <div class="card-body">
+                    <div id="version-select" class="btn-group-lg btn-group-toggle" data-toggle="buttons"></div>
+                    <small class="form-text text-muted">scala-uri version</small>
+                </div>
+            </div>
+            <div class="col-xl card" style="margin: 5px">
+                <div class="card-body">
+                    <select id="benchmarks-select" class="custom-select custom-select-lg" onchange="redrawChart()">
+                    </select>
+                    <small class="form-text text-muted">benchmark</small>
+                </div>
+            </div>
+            <div class="col-xl-2 card" style="margin: 5px">
+                <div class="card-body">
+                    <select id="unit-select" class="custom-select custom-select-lg" onchange="redrawChart()">
+                        <option value="score">score</option>
+                        <option value="0.0">0.0</option>
+                        <option value="50.0">50.0</option>
+                        <option value="90.0">90.0</option>
+                        <option value="95.0">95.0</option>
+                        <option value="99.0">99.0</option>
+                        <option value="99.9">99.9</option>
+                        <option value="99.99">99.99</option>
+                        <option value="99.999">99.999</option>
+                        <option value="99.9999">99.9999</option>
+                        <option value="100.0">100.0</option>
+                    </select>
+                    <small class="form-text text-muted">metric</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col card" style="min-width: 800px; margin: 5px">
+                <div class="card-body">
+                    <canvas id="chart"></canvas>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-    <div style="width:100%">
-        <canvas id="chart"></canvas>
-    </div>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
     <script type="text/javascript">
         var datasets = [];
         var versionSeries = {}
         var versionJmhJsons = {}
         var benchmarksSelect = document.getElementById('benchmarks-select');
+        var unitSelect = document.getElementById('unit-select');
 
         const possibleXAxes = [
             'uriPartLength',
@@ -117,11 +158,6 @@
             return true;
         }
 
-        function removeFromChart(version) {
-            delete versionSeries[version];
-            redrawBenchmarksSelect();
-        }
-
         function addToChart(jmhJson, version) {
             console.log(jmhJson);
             var series = findSeries(jmhJson, version);
@@ -130,8 +166,13 @@
             versionJmhJsons[version] = jmhJson;
             console.log(versionSeries);
 
-            redrawBenchmarksSelect();
-            redrawChart();
+            // Prevents race-conditions when this function is called several times on first page load
+            var versionsSelected = $('#version-select .active').length;
+            var versionsGenerated = Object.keys(versionSeries).length;
+            if(versionsGenerated == versionsSelected) {
+                redrawBenchmarksSelect();
+                redrawChart();
+            }
         }
 
         function redrawBenchmarksSelect() {
@@ -139,7 +180,7 @@
 
             Object.values(versionSeries).forEach(function(series) {
                 series.forEach(function(aSeries) {
-                    benchmarks.add(aSeries.benchmark);
+                    benchmarks.add(aSeries.benchmark.replace('io.lemonlabs.uri.', ''));
                 });
             });
 
@@ -151,12 +192,13 @@
 
         function redrawChart() {
             datasets = [];
-            var selectedBenchmark = benchmarksSelect.value;
+            var selectedBenchmark = 'io.lemonlabs.uri.' + benchmarksSelect.value;
             var colorNames = Object.keys(chartColors);
             var xAxis;
             var yAxis;
 
             Object.keys(versionSeries).forEach(function(version) {
+                var selectedUnit = unitSelect.value;
                 var series = versionSeries[version];
                 var jmhJson = versionJmhJsons[version];
                 xAxis = findXAxis(jmhJson, selectedBenchmark);
@@ -177,9 +219,13 @@
 
                         if(jmhResult.benchmark == selectedBenchmark && theseParamsMatch) {
                             console.log(jmhResult.benchmark + ' matches!');
+
+                            var metric = jmhJson[j].primaryMetric;
+                            var yVal = selectedUnit == 'score' ? metric.score: metric.scorePercentiles[selectedUnit];
+
                             data.push({
                                 x: jmhJson[j].params[xAxis],
-                                y: jmhJson[j].primaryMetric.score
+                                y: yVal
                             });
                         }
                     }
@@ -225,8 +271,15 @@
 						    }
                         }]
                     },
+                    animation: {
+                        duration: 0
+                    },
                     legend: {
-                        position: 'right'
+                        position: 'bottom',
+                        fullWidth: false,
+                        labels: {
+                            fontSize: 10
+                        }
                     }
                 }
             });
@@ -237,18 +290,27 @@
             for (var version of versions) {
                 var check = checkedByDefault.includes(version);
                 var checkedAttr = check ? 'checked': '';
-                versionSelect.innerHTML += '<label>' + version + '</label><input id="' + version + '-checkbox" ' + checkedAttr + ' onchange="versionClicked(\'' + version + '\');" type="checkbox" />';
+                var activeAttr = check ? 'active': '';
+
+                versionSelect.innerHTML +=  '<label style="margin: 2px;" class="btn btn-secondary ' + activeAttr + '">' +
+                        '<input id="' + version + '-checkbox" ' + checkedAttr + ' onchange="versionClicked(\'' + version + '\');" type="checkbox" checked autocomplete="off">' + version + '</label>';
+
                 if(check) {
-                    versionClicked(version);
+                    addVersion(version);
                 }
             }
         }
 
+        function addVersion(ver) {
+            get('jmh-' + ver + '.json', function(r) { addToChart(r, ver) });
+        }
+
         function versionClicked(ver) {
             if(document.getElementById(ver + '-checkbox').checked) {
-                get('jmh-' + ver + '.json', function(r) { addToChart(r, ver) });
+                addVersion(ver)
             } else {
-                removeFromChart(ver);
+                delete versionSeries[ver];
+                redrawBenchmarksSelect();
                 redrawChart();
             }
         }
