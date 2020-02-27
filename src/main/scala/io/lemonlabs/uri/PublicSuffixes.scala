@@ -10,7 +10,7 @@ object PublicSuffixes {
       .filter(line => !line.startsWith("//") && !line.isEmpty && line.length < 20)
       .toVector
       .groupBy(_.length)
-      .view.mapValues(_.take(100))
+      .mapValues(_.take(100))
       .toMap
   }
 }
