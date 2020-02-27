@@ -66,6 +66,7 @@
         var unitSelect = document.getElementById('unit-select');
 
         const possibleXAxes = [
+            'publicSuffixLength',
             'uriPartLength',
             'uriParts'
         ];
@@ -125,7 +126,6 @@
                 var params = [];
                 var paramNames = Object.keys(jmhResult.params);
                 var paramsKey = '';
-
                 for(var j = 0; j < paramNames.length; j++) {
                     var paramName = paramNames[j];
                     if(!possibleXAxes.includes(paramName)) {

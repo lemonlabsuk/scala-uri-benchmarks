@@ -19,12 +19,12 @@ object ParseManyPartsBenchmark {
     var queryManyParams: String = _
 
     @Setup def setUp(params: BenchmarkParams): Unit = {
-      val partLength = params.getParam("uriParts").toInt
+      val numOfParts = params.getParam("uriParts").toInt
       val percentEncode = params.getParam("everythingIsPercentEncoded").toBoolean
 
       val pe = PercentEncoder()
 
-      val randomStrings = Vector.fill(partLength)(Random.alphanumeric.take(5).mkString)
+      val randomStrings = Vector.fill(numOfParts)(Random.alphanumeric.take(5).mkString)
       val parts = if(percentEncode) randomStrings.map(pe.encode(_, "UTF-8")) else randomStrings
 
       domainManyParts = "http://" + parts.mkString(".")
@@ -39,10 +39,9 @@ object ParseManyPartsBenchmark {
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 10, time = 200, timeUnit = TimeUnit.MILLISECONDS)
-@Measurement(iterations = 10, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Warmup(iterations = 50, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 50, time = 200, timeUnit = TimeUnit.MILLISECONDS)
 class ParseManyPartsBenchmark {
-
 
   import org.openjdk.jmh.annotations.Param
 
