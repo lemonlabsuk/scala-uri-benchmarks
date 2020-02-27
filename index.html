@@ -24,8 +24,10 @@
         var versionJmhJsons = {}
         var benchmarksSelect = document.getElementById('benchmarks-select');
 
-        var possibleXAxes = [
-            'uriPartLength'
+        const possibleXAxes = [
+            'publicSuffixLength',
+            'uriPartLength',
+            'uriParts'
         ];
 
         var chartColors = {
@@ -72,7 +74,6 @@
                 var params = [];
                 var paramNames = Object.keys(jmhResult.params);
                 var paramsKey = '';
-
                 for(var j = 0; j < paramNames.length; j++) {
                     var paramName = paramNames[j];
                     if(!possibleXAxes.includes(paramName)) {

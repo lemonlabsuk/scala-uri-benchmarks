@@ -39,11 +39,10 @@ object ParseLongPartsBenchmark {
 @State(Scope.Thread)
 @BenchmarkMode(Array(Mode.AverageTime))
 @OutputTimeUnit(TimeUnit.MILLISECONDS)
-@Warmup(iterations = 10, time = 200, timeUnit = TimeUnit.MILLISECONDS)
-@Measurement(iterations = 10, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Warmup(iterations = 50, time = 200, timeUnit = TimeUnit.MILLISECONDS)
+@Measurement(iterations = 50, time = 200, timeUnit = TimeUnit.MILLISECONDS)
 class ParseLongPartsBenchmark {
-
-
+  
   import org.openjdk.jmh.annotations.Param
 
   @Param(Array("1", "10", "100", "1000", "2000"))
