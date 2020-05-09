@@ -3,14 +3,19 @@ package io.lemonlabs.uri
 import scala.io.Source
 
 object PublicSuffixes {
-  val hundredByLength: Map[Int, Vector[String]] = {
+  val all: List[String] = {
     Source.fromURL(getClass.getResource("/public_suffix_list.dat"), "UTF-8")
       .getLines()
       .map(_.trim)
-      .filter(line => !line.startsWith("//") && !line.isEmpty && line.length < 20)
-      .toVector
-      .groupBy(_.length)
-      .view.mapValues(_.take(100))
-      .toMap
+      .filter(line => !line.startsWith("//") && line.nonEmpty)
+      .toList
+  }
+
+  val alexa10k: List[String] = {
+    Source.fromURL(getClass.getResource("/alexa-top-10thousand.txt"), "UTF-8")
+      .getLines()
+      .map(_.trim)
+      .filter(line => line.nonEmpty)
+      .toList
   }
 }

@@ -1,7 +1,5 @@
 [
-  "1.1.2",
-  "1.5.1",
-  "2.0.0-M4",
-  "2.0.0-M5",
-  "2.0.0"
+  "segment-brute-force",
+  "trie",
+  "segment-trie"
 ]
