@@ -13,11 +13,9 @@ resolvers += "Sonatype OSS Releases" at "https://oss.sonatype.org/content/reposi
 enablePlugins(JmhPlugin)
 
 libraryDependencies ++= Seq(
-  "io.lemonlabs" %% "scala-uri" % sys.props.getOrElse("scalaUri.ver", "2.0.0"),
+  "io.lemonlabs" %% "scala-uri" % sys.props.getOrElse("scalaUri.ver", "2.2.2"),
   "io.spray" %% "spray-json" % "1.3.5" // For scala-uri 1.5.1 support only
 )
-
-testFrameworks += new TestFramework("org.scalameter.ScalaMeterFramework")
 
 logBuffered := false
 
