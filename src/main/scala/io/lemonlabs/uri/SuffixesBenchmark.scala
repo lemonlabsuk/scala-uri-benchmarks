@@ -41,25 +41,27 @@ object SuffixesBenchmark {
 
     def size: Int = children.size + children.values.map(_.size).sum
 
-    def matches(s: String): Vector[String] = {
+    def matches(s: String): List[String] = {
       @tailrec
       def collectMatches(previous: String,
-                         stillToGo: List[Char],
+                         stillToGo: Array[Char],
                          current: Trie,
-                         matches: Vector[String]): Vector[String] = stillToGo match {
-        case Nil =>
+                         matches: List[String]): List[String] = {
+        if(stillToGo.isEmpty)
           matches
-        case x :: xs =>
-          current.next(x) match {
+        else
+          current.next(stillToGo.head) match {
             case None =>
               matches
             case Some(next) =>
-              val newPrevious = previous + x
-              val newMatches = if (next.wordEnd && xs.headOption.contains('.')) newPrevious +: matches else matches
+              val x = stillToGo.head
+              val xs = stillToGo.tail
+              val newPrevious = s"$x$previous"
+              val newMatches = if (next.wordEnd && xs.headOption.forall(_ == '.')) newPrevious :: matches else matches
               collectMatches(newPrevious, xs, next, newMatches)
           }
       }
-      collectMatches("", s.toCharArray.toList, this, Vector.empty)
+      collectMatches("", s.toCharArray, this, List.empty)
     }
 
     def longestMatch(s: String): Option[String] =
@@ -138,8 +140,8 @@ object SuffixesBenchmark {
     var segmentTrie: SegmentTrie = _
 
     @Setup def setUp(params: BenchmarkParams): Unit = {
-      val numberOfSuffixes = params.getParam("numberOfSuffixes").toInt
-      suffixes = PublicSuffixes.all.take(numberOfSuffixes)
+      // val numberOfSuffixes = params.getParam("numberOfSuffixes").toInt
+      suffixes = PublicSuffixes.all//.take(numberOfSuffixes)
 
       suffixesSet = suffixes.toSet
 
@@ -150,9 +152,12 @@ object SuffixesBenchmark {
         t.insert(s.split('.').reverse.toList)
       }
 
-      val www = params.getParam("www").toBoolean
+      val numberDotSegment = params.getParam("numberDotSegment").toInt - 1
+      //val www = params.getParam("www").toBoolean
       findLongestOnThese = PublicSuffixes.alexa10k.map { host =>
-        if(!www) host else s"www.$host"
+        // s"www.$host"
+        val prefix = List.fill(numberDotSegment)(Random.alphanumeric.take(5)).mkString(".")
+        if(numberDotSegment == 0) host else s"$prefix.$host"
       }
     }
   }
@@ -167,12 +172,15 @@ class SuffixesBenchmark {
 
   import org.openjdk.jmh.annotations.Param
 
-  @Param(Array("10", "100", "10000"))
 //  @Param(Array("10000"))
-  private var numberOfSuffixes: Int = _
+//  @Param(Array("100", "500", "1000", "2000", "4000", "6000", "8000"))
+//  private var numberOfSuffixes: Int = _
 
-  @Param(Array("true", "false"))
-  private var www: Boolean = _
+  @Param(Array("1", "2", "3", "4", "5", "10"))
+  private var numberDotSegment: Int = _
+
+//  @Param(Array("true", "false"))
+//  private var www: Boolean = _
 
   @Benchmark
   @Fork(1)
@@ -180,42 +188,41 @@ class SuffixesBenchmark {
     s.findLongestOnThese.foreach { findLongestOnThis =>
 
 //      // Brute force DB implementation
-//      val bfDbRes = s.suffixes.foldLeft(Option.empty[String]) { (longest, suffix) =>
-//        if (findLongestOnThis.endsWith(s".$suffix") && longest.forall(_.length < suffix.length)) {
-//          Some(suffix)
-//        } else {
-//          longest
-//        }
-//      }
+    //  val bfDbRes = s.suffixes.foldLeft(Option.empty[String]) { (longest, suffix) =>
+    //    if (findLongestOnThis.endsWith(s".$suffix") && longest.forall(_.length < suffix.length)) {
+    //      Some(suffix)
+    //    } else {
+    //      longest
+    //    }
+    //  }
 
        // Brute force segment implementation
-//      def findLongest(remaining: String): Option[String] = {
-//        if(s.suffixesSet.contains(remaining)) {
-//          Some(remaining)
-//        } else {
-//          val i = remaining.indexOf('.')
-//          if(i == -1)
-//            None
-//          else
-//            findLongest(remaining.substring(i + 1))
-//        }
-//      }
-//      val bfSegRes = findLongest(findLongestOnThis)
+      // def findLongest(remaining: String): Option[String] = {
+      //   if(s.suffixesSet.contains(remaining)) {
+      //     Some(remaining)
+      //   } else {
+      //     val i = remaining.indexOf('.')
+      //     if(i == -1)
+      //       None
+      //     else
+      //       findLongest(remaining.substring(i + 1))
+      //   }
+      // }
+      // val bfSegRes = findLongest(findLongestOnThis)
 
 //      // Trie implementation
-//      val tRes = s.trie.longestMatch(findLongestOnThis.reverse).map(_.reverse)
+     val tRes = s.trie.longestMatch(findLongestOnThis.reverse)
 
       //      // SegmentTrie implementation
-      val stRes = s.segmentTrie.longestMatch(findLongestOnThis)
+      // val stRes = s.segmentTrie.longestMatch(findLongestOnThis)
 
-//      if(stRes != tRes || bfSegRes != tRes) {
-//        println("==============")
-//        println(s.suffixes)
-//        println(s"findLongestOnThis = $findLongestOnThis")
-//        println(s"stRes = $stRes")
-//        println(s"tRes = $tRes")
-//        println(s"bfSegRes = $bfSegRes")
-//      }
+    //  if(stRes != tRes || bfSegRes != tRes) {
+    //    println("==============")
+    //    println(s"findLongestOnThis = $findLongestOnThis")
+    //    println(s"stRes = $stRes")
+    //    println(s"tRes = $tRes")
+    //    println(s"bfSegRes = $bfSegRes")
+    //  }
 
 //      if(bfDbRes != tRes || bfSegRes != tRes) {
 //        println(s.suffixes)

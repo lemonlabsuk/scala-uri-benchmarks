@@ -1,5 +1,7 @@
 [
-  "segment-brute-force",
+  "suffix-list-scan",
+  "set",
   "trie",
-  "segment-trie"
+  "segment-trie",
+  "2.0.0"
 ]
