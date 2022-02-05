@@ -9,7 +9,7 @@ if [ -z SCALA_URI_VERS ]; then
 fi
 
 for SCALA_URI_VER in $SCALA_URI_VERS; do
-  sbt -DscalaUri.ver=$SCALA_URI_VER "jmh:run -rf json -rff jmh-$SCALA_URI_VER.json $BENCHMARK_CLASS"
+  sbt -DscalaUri.ver=$SCALA_URI_VER clean "jmh:run -rf json -rff jmh-$SCALA_URI_VER.json $BENCHMARK_CLASS"
 
   VER_FILE=jmh-scala-uri-versions.json
 
